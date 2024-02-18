@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+@layer components {
+    .inactive {
+        grid-template-rows: 0fr;
+    }
+
+    .active {
+        grid-template-rows: 1fr;
+    }
+
+    /* Accessibility */
+    .invertColors {
+        filter: invert();
+        overflow: hidden;
+    }
+}
